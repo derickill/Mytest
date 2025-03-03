@@ -2,12 +2,12 @@ import random
 
 actions = ['P', 'F', 'C']
 
-action_user = input('Que veux-tu jouer? (C ou F ou P : ')
+action_user = input('Que veux-tu jouer? (C ou F ou P) : ')
 
 action_machine = actions[random.randint(0,2)]
 print(f'La machine a joué {action_machine}')
 
-
+assert action_user  in actions, "Cette action n'existe pas"
 
 if action_user == action_machine:
 	print('Egalité')
